@@ -13,10 +13,10 @@ module.exports.data = async (req,res)=>{
     res.redirect(`/patient/${patient._id}`);
 }
 
-// module.exports.user = async (req,res)=>{
-//     let {id} = req.params;
-//     let patient = await Patient.findById(id);
-//     console.log(patient);
-//     patient.time =  new Date();
-//     res.render("user", {patient});
-// }
+module.exports.user = async (req,res)=>{
+    let {id} = req.params;
+    let patient = await Patient.findById(id);
+    console.log(patient);
+    patient.time =  new Date();
+    res.render("user", {patient});
+}

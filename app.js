@@ -34,10 +34,4 @@ app.listen(port, (req,res)=> {
 })
 app.get("/", formController.index);
 app.post("/data", formController.data);
-app.get("/patient/:id", async (req,res)=>{
-    let {id} = req.params;
-    let patient = await Patient.findById(id);
-    console.log(patient);
-    patient.time =  new Date();
-    res.render("user", {patient});
-});
+app.get("/patient/:id", formController.user);
