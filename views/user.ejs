@@ -1,0 +1,16 @@
+<% layout("boilerplate.ejs") %>
+<div class="p-3 mb-2 bg-success text-white user" style="font-weight: 500;"><b><span style="color: rgb(255, 255, 66);">Appointment approval Success!</span></b>
+    <br>
+    Your unique appointment id: <span style="color: yellow;"><%= patient._id %> </span> 
+    <br>
+    Token no: <span style="color: yellow;"><%= patient.token  %></span>
+    <br>
+    Submission time: <%= patient.time.toString().split(" ")[4]  %>
+    <br> <br>
+    Patient's name: <%= patient.name.firstName%> <%= patient.name.middleName  %> <%= patient.name.lastName  %> <br>
+    Mobile no. <%= patient.mobile %>
+    <br><br>
+    <form method="get" action="/">
+        <button class="btn btn-dark">Book another appointment</button>
+    </form>
+</div>

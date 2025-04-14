@@ -1,0 +1,133 @@
+<% layout("boilerplate.ejs") %>
+<div class="row ">
+  <div class="col-md-8">
+    <br>
+    <h2>Make a Appointment to Visit Our Doctor</h2>
+    <form method="post" action="/data" class="form-control mt-4">
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="name" class="form-label">Enter your Full Name</label>
+          <input
+            type="text"
+            name="user[name][firstName]"
+            placeholder="first name"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="mb-3 col-md-3">
+          <label for="name" class="form-label">&nbsp;</label>
+          <input
+            type="text"
+            name="user[name][middleName]"
+            placeholder="middle name"
+            class="form-control"
+          />
+        </div>
+        <div class="mb-3 col-md-4">
+          <label for="name" class="form-label">&nbsp;</label>
+          <input
+            type="text"
+            name="user[name][lastName]"
+            placeholder="last name"
+            class="form-control"
+            required
+          />
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="adress" class="form-label">Adress</label>
+        <textarea
+          name="user[adress]"
+          rows="2"
+          class="form-control"
+          placeholder="Ex. Harinchawra, Cooch Behar, West Bengal 736170"
+          required
+        ></textarea>
+      </div>
+      <div class="row">
+        <div class="mb-3 col-md-5">
+          <label for="birth" class="form-label">Date of birth</label>
+          <input
+            type="date"
+            name="user[birth]"
+            placeholder="enter image URL/link"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="mb-3 col-md-5">
+          <label for="blood" class="form-label">Blood group</label>
+          <select name="user[blood]" id="blood" class="form-control" required>
+            <option selected disabled>select here</option>
+            <option value="A+">A+</option>
+            <option value="O+">O+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="Age" class="form-label">Enter your age</label>
+          <input
+            type="number"
+            name="user[age]"
+            placeholder="Ex. 19"
+            class="form-control"
+            min="1"
+            max="100"
+            required
+          />
+        </div>
+        <div class="mb-3 col-md-8">
+          <label for="mobile" class="form-label">Enter your Mobile no.</label>
+          <input
+            type="text"
+            name="user[mobile]"
+            placeholder="+91"
+            class="form-control"
+            minlength="10"
+            maxlength="10"
+          />
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="doctors" class="form-label">Select a Doctor</label>
+        <select
+          name="user[doctor]"
+          id="doctors"
+          class="form-control"
+          value="select"
+          required
+        >
+          <option selected disabled>select here</option>
+          <option value="Soumyajit">Dr. Soumyajit</option>
+          <option value="Biraj">Dr. Biraj</option>
+          <option value="Sarupyo">Dr. Sarupyo</option>
+          <option value="Debanjan">Dr. Debanjan</option>
+          <option value="Joydip">Dr. Joydip</option>
+        </select>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input is-invalid"
+          type="checkbox"
+          value=""
+          id="invalidCheck3"
+          aria-describedby="invalidCheck3Feedback"
+          required
+        />
+        <label class="form-check-label" for="invalidCheck3">
+          Agree to terms and conditions
+        </label>
+        <div id="invalidCheck3Feedback" class="invalid-feedback display">
+          You must agree before submitting.
+        </div>
+      </div>
+      <button class="btn add-btn mt-3 mb-3">Add</button>
+    </form>
+  </div>
+</div>

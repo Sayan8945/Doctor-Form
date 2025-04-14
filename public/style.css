@@ -1,0 +1,40 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+label {
+    font-weight: 500;
+}
+.form-control {
+  padding: 1rem;
+  background-color: #E1E8ED;
+}
+.form-control input,
+.form-control textarea,
+.form-control select {
+  background-color: #fff;
+}
+.display {
+  display: none;
+}
+.btn {
+  background-color: #1da1f2;
+  color: white;
+  font: 500;
+}
+.callout-info {
+    border: 1rem;
+}
+.user {
+    width: 100%;
+}
+.user p {
+    color: yellow;
+}
+.btn-another {
+  background-color: #222222;
+  color: white;
+  border-radius: 1rem;
+}
